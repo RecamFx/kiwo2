@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: "Roboto", sans-serif; */
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --letra: black;
+    --blanco: white;
+
+    --Sombra: rgba(0, 0, 0, 0.12);
+
+    --semiNegro: rgb(54, 54, 54);
+
+    --verdecito: #00a650;
+
+    --semiBlanco: rgb(241, 241, 241);
+    
+    --gris: rgb(227, 227, 227);
+    --grisClaro: rgb(248, 248, 248);
+    --grisOscuro: rgb(177, 177, 177);
+
+    --rojo: rgb(255, 0, 0);
+    --rojoOscuro: rgb(236, 0, 0);
+
+    --fFamily: 'Helvetica Neue', sans-serif;
+    --fFamily2:  "Barlow", sans-serif;
+    --fWeight: 400;
+    --fStyle: normal;
+
+    --headerHEIGHT: 60px;
+
+    --productosTamano: 23vw;
+}
+
+@media (max-width: 959px) {
+    :root {
+    --productosTamano: 33vw;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+    --productosTamano: 48vw;
+    }
+}
+
+
+body{
+    background-color: var(--grisClaro);
+}
+
+/* --------------------------------MAIN-------------------------------- */
+/* --------------------------------MAIN-------------------------------- */
+/* --------------------------------MAIN-------------------------------- */
+/* --------------------------------MAIN-------------------------------- */
+/* --------------------------------MAIN-------------------------------- */
+
+
+main{
+    padding-top: calc(var(--headerHEIGHT) + var(--headerTOPH) + 2vh);
+    padding-bottom: 2vh;
+
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.pagina {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topPagina {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    width: 100%;
+    max-width: --;
+}
+
+.topPagina h1 {
+    font-size: 4vw;
+    font-family: var(--fFamily2);
+    font-weight: 700;
+    color: var(--rojoOscuro);
+}
+
+.topPagina button {
+    all: unset;
+    padding: 5px;
+    border: 2px solid var(--rojoOscuro);
+    color: var(--rojoOscuro);
+    transition: 0.4s;
+    height: 30px;
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+    .topPagina button {
+        height: 20px;
+    }
+}
+
+.topPagina button:hover {
+    box-shadow: inset 400px 0 0 0 var(--rojo);
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+.grid {
+    /* width: 100%; */
+    display: grid;
+    justify-items: center;
+    grid-gap: 10px;
+    /* grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); */
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 3vw;
+}
+
+@media (max-width: 959px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* PRODUCTOS */
+
+.producto {
+    height: calc(var(--productosTamano) + 80px);
+    width: var(--productosTamano);
+}
+
+.producto .cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgba(255, 0, 0, 0.000000000001);
+    height: calc(var(--productosTamano) + 80px);
+    width: var(--productosTamano);
+    border-radius: 3px;
+    overflow: hidden;
+    transition: 0.15s;
+}
+
+.producto:hover .cont {
+    /* border: 2px solid var(--rojo); */
+    cursor: pointer;
+}
+
+/* Producto img */
+
+.producto .imagen {
+    height: var(--productosTamano);
+    width: var(--productosTamano);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blanco);
+}
+
+.producto .imagen img {
+    height: 80%;
+    width: 80%;
+    object-fit: cover;
+    transition: 0.2s;
+}
+
+.producto .imagen img:hover {
+    transform: scale(1.05);
+}
+
+/* Producto descripcion */
+
+.producto .descripcion {
+    
+    height: 80px;
+    width: var(--productosTamano);
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.descripcion h2 {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.descripcion h3 {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.descripcion p {
+    font-weight: 400;
+    font-size: 14px;
+    filter: opacity(60%);
+}
+
+.descripcion div {
+    overflow: hidden;
+    height: 79px;
+}

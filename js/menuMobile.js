@@ -1,0 +1,13 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.querySelector('.menuMobileButton');
+    const crossButton = document.querySelector('#crossMenuMobile');
+    const menu = document.querySelector('.menuMobileDIV');
+
+    menuButton.addEventListener('click', function() {
+        menu.classList.add('show');
+    });
+
+    crossButton.addEventListener('click', function() {
+        menu.classList.remove('show');
+    });
+});
